@@ -1,0 +1,18 @@
+Users #class
+com.axonactive #namespace
+firstName String #field
+firstName PERSISTENT #fieldModifier
+lastName String #field
+lastName PERSISTENT #fieldModifier
+birthday java.util.Date #field
+birthday PERSISTENT #fieldModifier
+email String #field
+email PERSISTENT #fieldModifier
+gender String #field
+gender PERSISTENT #fieldModifier
+paymentType String #field
+paymentType PERSISTENT #fieldModifier
+creditCardNumber String #field
+creditCardNumber PERSISTENT #fieldModifier
+billingAddress com.axonactive.BillingAddress #field
+billingAddress PERSISTENT #fieldModifier

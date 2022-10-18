@@ -1,0 +1,4 @@
+Users #class
+motobike.number #namespace
+personalInformation motobike.number.PersonalInformation #field
+personalInformation PERSISTENT #fieldModifier

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="ch.ivyteam.ivy.designer.ui.attribute.SelectAttributeDialog">
+		<item key="DIALOG_X_ORIGIN" value="70"/>
+		<item key="DIALOG_Y_ORIGIN" value="32"/>
+		<item key="DIALOG_WIDTH" value="500"/>
+		<item key="DIALOG_HEIGHT" value="500"/>
+		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
+	</section>
+	<section name="ch.ivyteam.ivy.guiComponents.swt.editors.functionbrowser.FunctionBrowserDialog">
+		<item key="DIALOG_X_ORIGIN" value="-30"/>
+		<item key="DIALOG_Y_ORIGIN" value="-35"/>
+		<item key="DIALOG_WIDTH" value="700"/>
+		<item key="DIALOG_HEIGHT" value="600"/>
+		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
+		<section name="ch.ivyteam.ivy.guiComponents.swt.editors.functionbrowser.FunctionBrowser">
+			<item key="HelpAreaForm.Weight_Left" value="700"/>
+			<item key="HelpAreaForm.Weight_Right" value="300"/>
+			<item key="ResultAreaForm.Weight_Left" value="250"/>
+			<item key="ResultAreaForm.Weight_Right" value="750"/>
+			<item key="FilterText.Text" value=""/>
+			<item key="VisibilityLevel.Name" value="EXPERT"/>
+		</section>
+	</section>
+	<section name="ch.ivyteam.ivy.guiComponents.swt.dialogs.search.userdialog.UserDialogSelectionDialog">
+		<item key="DIALOG_X_ORIGIN" value="825"/>
+		<item key="DIALOG_Y_ORIGIN" value="-94"/>
+		<item key="DIALOG_WIDTH" value="500"/>
+		<item key="DIALOG_HEIGHT" value="500"/>
+		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
+	</section>
+	<section name="ch.ivyteam.ivy.guiComponents.swt.dialogs.processsearch.ProcessSearchDialog$Builder$1">
+		<item key="DIALOG_X_ORIGIN" value="70"/>
+		<item key="DIALOG_Y_ORIGIN" value="32"/>
+		<item key="DIALOG_WIDTH" value="500"/>
+		<item key="DIALOG_HEIGHT" value="500"/>
+		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
+	</section>
+	<section name="ch.ivyteam.ivy.designer.inscription.ui.activity.connect.LocalExtensionBrowser$ExtensionDialog">
+		<item key="DIALOG_X_ORIGIN" value="383"/>
+		<item key="DIALOG_Y_ORIGIN" value="370"/>
+		<item key="DIALOG_WIDTH" value="500"/>
+		<item key="DIALOG_HEIGHT" value="500"/>
+		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
+	</section>
+</section>

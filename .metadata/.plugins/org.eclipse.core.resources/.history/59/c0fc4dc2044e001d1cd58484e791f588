@@ -1,0 +1,8 @@
+package data.validator;
+
+import javax.faces.validator.FacesValidator;
+
+@FacesValidator("emailValidator")
+public class EmailValidator {
+
+}

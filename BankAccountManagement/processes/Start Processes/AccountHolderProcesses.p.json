@@ -1,0 +1,38 @@
+{
+  "format" : "9.4.21",
+  "id" : "183E4E3FA1C996A6",
+  "config" : {
+    "data" : "bank.account.management.Data"
+  },
+  "elements" : [ {
+      "id" : "f0",
+      "type" : "RequestStart",
+      "name" : "inputAccountHolder.ivp",
+      "config" : {
+        "callSignature" : "inputAccountHolder",
+        "outLink" : "inputAccountHolder.ivp"
+      },
+      "visual" : {
+        "at" : { "x" : 96, "y" : 64 }
+      },
+      "connect" : { "id" : "f4", "to" : "f3" }
+    }, {
+      "id" : "f1",
+      "type" : "TaskEnd",
+      "visual" : {
+        "at" : { "x" : 352, "y" : 64 }
+      }
+    }, {
+      "id" : "f3",
+      "type" : "DialogCall",
+      "name" : "AccountHolderDialog",
+      "config" : {
+        "dialogId" : "bank.account.management.AccountHolderDialog",
+        "startMethod" : "start()"
+      },
+      "visual" : {
+        "at" : { "x" : 224, "y" : 64 }
+      },
+      "connect" : { "id" : "f2", "to" : "f1" }
+    } ]
+}

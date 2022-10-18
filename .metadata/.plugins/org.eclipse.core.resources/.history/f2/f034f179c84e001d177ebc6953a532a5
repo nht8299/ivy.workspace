@@ -1,0 +1,4 @@
+Users #class
+PlateNumber #namespace
+userInformation PlateNumber.UserInformation #field
+userInformation PERSISTENT #fieldModifier

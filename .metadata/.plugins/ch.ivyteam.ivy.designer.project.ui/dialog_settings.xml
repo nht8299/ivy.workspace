@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="CMSTreeViewerState">
+		<item key="treeColumnWidth" value="535"/>
+		<item key="treeColWidthBeforeHideAllColumn" value="-1"/>
+		<item key="sortDirection" value="128"/>
+		<item key="showValueColumn" value="false"/>
+		<item key="linkWithEditor" value="false"/>
+		<section name="languagesGroup">
+			<section name="en">
+				<item key="manualDisplay" value="false"/>
+				<item key="display" value="false"/>
+				<item key="columnWidth" value="200"/>
+			</section>
+		</section>
+	</section>
+	<section name="CMSChooserDialogState">
+		<item key="treeColumnWidth" value="896"/>
+		<section name="languagesGroup">
+			<section name="en">
+				<item key="columnWidth" value="200"/>
+			</section>
+		</section>
+	</section>
+</section>

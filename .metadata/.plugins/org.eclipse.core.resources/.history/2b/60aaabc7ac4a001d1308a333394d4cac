@@ -1,0 +1,41 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:cc="http://xmlns.jcp.org/jsf/composite"
+	xmlns:ic="http://ivyteam.ch/jsf/component"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:pe="http://primefaces.org/ui/extensions">
+<cc:interface componentType="IvyComponent">
+</cc:interface>
+<cc:attribute name="label" />
+<cc:implementation>
+	<div class="ui-fluid grid formgrid" style="width: 100%">
+		<p:fieldset legend="Personal Information" id="personalInformation">
+			<h:outputText>#{cc.attrs.label}</h:outputText>
+			<h:panelGrid columns="2" cellpadding="2" columnClasses="label-top"
+				id="personalInformationPanel">
+				<p:panelGrid columns="2" layout="grid" styleClass="ui-panelgrid-blank ui-fluid" 
+          columnClasses="ui-g-12 ui-md-3 ui-lg-2, ui-g-12 ui-md-9 ui-lg-4, ui-g-12 ui-md-3 ui-lg-2, ui-g-12 ui-md-9 ui-lg-4">
+				<p:outputLabel value="fullname: " for="fullname"></p:outputLabel>
+				<p:inputText id="fullname" required="true"
+					value="#{data.personalInfomation.fullname}"></p:inputText>
+				<p:outputLabel value="ID: " for="id"></p:outputLabel>
+				<p:inputText id="id" required="true"
+					value="#{data.personalInfomation.id}"></p:inputText>
+				<p:outputLabel value="Birthday: " for="birthday"></p:outputLabel>
+				<p:datePicker showIcon="true" id="birthday" required="true"
+					placeholder="MM/dd/YYYY"
+					value="#{data.personalInfomation.birthday}">
+					<f:validator validatorId="customBirthDayValidator"></f:validator>
+				</p:datePicker>
+				<p:outputLabel value="Description" for="description"></p:outputLabel>
+				<p:inputTextarea id="description" value=""></p:inputTextarea>
+				<br />
+				</p:panelGrid>
+			</h:panelGrid>
+		</p:fieldset>
+	</div>
+</cc:implementation>
+
+</html>

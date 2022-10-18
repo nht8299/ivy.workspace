@@ -1,0 +1,4 @@
+isApproveData #class
+bank.account.management.isApprove #namespace
+isApprove Boolean #field
+isApprove PERSISTENT #fieldModifier

@@ -1,0 +1,4 @@
+PlateGenerateComponentData #class
+motobike.number.PlateGenerateComponent #namespace
+plateNumber data.generator.PlateGenerator #field
+plateNumber PERSISTENT #fieldModifier

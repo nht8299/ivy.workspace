@@ -1,0 +1,20 @@
+PersonalInformation #class
+motobike.number #namespace
+fullname String #field
+fullname PERSISTENT #fieldModifier
+id String #field
+id PERSISTENT #fieldModifier
+birthday java.util.Date #field
+birthday PERSISTENT #fieldModifier
+email String #field
+email PERSISTENT #fieldModifier
+address String #field
+address PERSISTENT #fieldModifier
+Types String #field
+Types PERSISTENT #fieldModifier
+chassicNumber String #field
+chassicNumber PERSISTENT #fieldModifier
+chassicFrameNumber String #field
+chassicFrameNumber PERSISTENT #fieldModifier
+description String #field
+description PERSISTENT #fieldModifier

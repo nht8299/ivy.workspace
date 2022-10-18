@@ -1,0 +1,39 @@
+{
+  "format" : "9.4.21",
+  "id" : "183E4D9FBDFA6788",
+  "config" : {
+    "data" : "bank.account.management.HelloProcessesData"
+  },
+  "elements" : [ {
+      "id" : "f0",
+      "type" : "RequestStart",
+      "name" : "HelloWorld.ivp",
+      "config" : {
+        "callSignature" : "HelloWorld",
+        "outLink" : "HelloWorld.ivp"
+      },
+      "visual" : {
+        "at" : { "x" : 96, "y" : 64 }
+      },
+      "connect" : { "id" : "f4", "to" : "f3" }
+    }, {
+      "id" : "f1",
+      "type" : "TaskEnd",
+      "visual" : {
+        "at" : { "x" : 360, "y" : 64 }
+      }
+    }, {
+      "id" : "f3",
+      "type" : "Script",
+      "name" : "Hello",
+      "config" : {
+        "output" : {
+          "code" : "ivy.log.info(\"Hello DMM\");"
+        }
+      },
+      "visual" : {
+        "at" : { "x" : 232, "y" : 56 }
+      },
+      "connect" : { "id" : "f2", "to" : "f1" }
+    } ]
+}

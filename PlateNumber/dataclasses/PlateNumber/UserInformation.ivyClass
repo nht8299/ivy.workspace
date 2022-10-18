@@ -1,0 +1,12 @@
+UserInformation #class
+PlateNumber #namespace
+fullName String #field
+fullName PERSISTENT #fieldModifier
+id String #field
+id PERSISTENT #fieldModifier
+birthday java.util.Date #field
+birthday PERSISTENT #fieldModifier
+email String #field
+email PERSISTENT #fieldModifier
+address String #field
+address PERSISTENT #fieldModifier

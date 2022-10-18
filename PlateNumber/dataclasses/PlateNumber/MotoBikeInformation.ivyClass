@@ -1,0 +1,10 @@
+MotoBikeInformation #class
+PlateNumber #namespace
+type String #field
+type PERSISTENT #fieldModifier
+chassicNumber String #field
+chassicNumber PERSISTENT #fieldModifier
+chassicFrameNumber String #field
+chassicFrameNumber PERSISTENT #fieldModifier
+description String #field
+description PERSISTENT #fieldModifier

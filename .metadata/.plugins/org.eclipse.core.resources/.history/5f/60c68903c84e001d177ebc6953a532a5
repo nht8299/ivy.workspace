@@ -1,0 +1,4 @@
+UserInformation #class
+PlateNumber #namespace
+fullName String #field
+fullName PERSISTENT #fieldModifier

@@ -1,0 +1,69 @@
+{
+  "format" : "9.4.21",
+  "id" : "183C02ABDA01B1C0",
+  "config" : {
+    "data" : "com.axonactive.HelloProcessData"
+  },
+  "elements" : [ {
+      "id" : "f0",
+      "type" : "RequestStart",
+      "name" : "Hello.ivp",
+      "config" : {
+        "callSignature" : "Hello",
+        "outLink" : "Hello.ivp"
+      },
+      "visual" : {
+        "at" : { "x" : 88, "y" : 64 }
+      },
+      "connect" : { "id" : "f4", "to" : "f3" }
+    }, {
+      "id" : "f1",
+      "type" : "TaskEnd",
+      "visual" : {
+        "at" : { "x" : 352, "y" : 64 }
+      }
+    }, {
+      "id" : "f3",
+      "type" : "Script",
+      "name" : "Hello",
+      "config" : {
+        "output" : {
+          "code" : "ivy.log.info(\"Hello\");"
+        }
+      },
+      "visual" : {
+        "at" : { "x" : 224, "y" : 64 }
+      },
+      "connect" : { "id" : "f2", "to" : "f1" }
+    }, {
+      "id" : "f5",
+      "type" : "RequestStart",
+      "name" : "inputUser.ivp",
+      "config" : {
+        "callSignature" : "inputUser",
+        "outLink" : "inputUser.ivp"
+      },
+      "visual" : {
+        "at" : { "x" : 88, "y" : 184 }
+      },
+      "connect" : { "id" : "f8", "to" : "f7" }
+    }, {
+      "id" : "f6",
+      "type" : "TaskEnd",
+      "visual" : {
+        "at" : { "x" : 352, "y" : 184 }
+      }
+    }, {
+      "id" : "f7",
+      "type" : "DialogCall",
+      "name" : "User",
+      "config" : {
+        "dialogId" : "com.axonactive.User",
+        "startMethod" : "start()"
+      },
+      "visual" : {
+        "at" : { "x" : 216, "y" : 184 }
+      },
+      "connect" : { "id" : "f9", "to" : "f6" }
+    } ]
+}

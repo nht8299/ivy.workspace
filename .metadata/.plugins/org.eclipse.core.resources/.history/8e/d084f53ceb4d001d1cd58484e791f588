@@ -1,0 +1,101 @@
+{
+  "format" : "9.4.21",
+  "id" : "183C6819D7947430",
+  "kind" : "HTML_DIALOG",
+  "config" : {
+    "data" : "motobike.number.Homepage.HomepageData"
+  },
+  "elements" : [ {
+      "id" : "f0",
+      "type" : "HtmlDialogStart",
+      "name" : "start()",
+      "config" : {
+        "callSignature" : "start",
+        "guid" : "183C6819D7A38ECE"
+      },
+      "visual" : {
+        "at" : { "x" : 96, "y" : 64 }
+      },
+      "connect" : { "id" : "f12", "to" : "f11" }
+    }, {
+      "id" : "f1",
+      "type" : "HtmlDialogEnd",
+      "visual" : {
+        "at" : { "x" : 504, "y" : 72 }
+      }
+    }, {
+      "id" : "f3",
+      "type" : "HtmlDialogEventStart",
+      "name" : "close",
+      "config" : {
+        "guid" : "183C6819D7B53BD2"
+      },
+      "visual" : {
+        "at" : { "x" : 96, "y" : 160 }
+      },
+      "connect" : { "id" : "f5", "to" : "f4" }
+    }, {
+      "id" : "f4",
+      "type" : "HtmlDialogExit",
+      "visual" : {
+        "at" : { "x" : 224, "y" : 160 }
+      }
+    }, {
+      "id" : "f6",
+      "type" : "HtmlDialogEventStart",
+      "name" : "submitUser",
+      "config" : {
+        "guid" : "183CB3EF67DB4104"
+      },
+      "visual" : {
+        "at" : { "x" : 96, "y" : 280 }
+      },
+      "connect" : { "id" : "f10", "to" : "f9" }
+    }, {
+      "id" : "f7",
+      "type" : "HtmlDialogEnd",
+      "visual" : {
+        "at" : { "x" : 352, "y" : 280 }
+      }
+    }, {
+      "id" : "f9",
+      "type" : "Script",
+      "name" : "printOutUser",
+      "config" : {
+        "output" : {
+          "code" : [
+            "ivy.log.info(\"Fullname: {0}\",in.user.personalInformation.fullname);",
+            "ivy.log.info(\"id: {0}\",in.user.personalInformation.id);",
+            "ivy.log.info(\"address: {0}\",in.user.personalInformation.address);",
+            "ivy.log.info(\"birthday: {0}\",in.user.personalInformation.birthday);",
+            "ivy.log.info(\"email: {0}\",in.user.personalInformation.email);",
+            "ivy.log.info(\"type: {0}\",in.user.motobikeInformation.type);",
+            "ivy.log.info(\"chassisNumber: {0}\",in.user.motobikeInformation.chassisNumber);",
+            "ivy.log.info(\"chassisFrameNumber: {0}\",in.user.motobikeInformation.chassisFrameNumber);",
+            "ivy.log.info(\"description: {0}\",in.user.motobikeInformation.description);"
+          ]
+        }
+      },
+      "visual" : {
+        "at" : { "x" : 224, "y" : 280 }
+      },
+      "connect" : { "id" : "f8", "to" : "f7" }
+    }, {
+      "id" : "f11",
+      "type" : "Script",
+      "name" : "initialize User",
+      "config" : {
+        "output" : {
+          "code" : [
+            "import motobike.number.Users;",
+            "",
+            "in.user = new Users();"
+          ]
+        }
+      },
+      "visual" : {
+        "at" : { "x" : 272, "y" : 72 }
+      },
+      "connect" : { "id" : "f2", "to" : "f1" }
+    } ]
+}

@@ -1,0 +1,6 @@
+BillingAddress #class
+com.axonactive #namespace
+street String #field
+street PERSISTENT #fieldModifier
+country String #field
+country PERSISTENT #fieldModifier

@@ -1,0 +1,16 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:cc="http://xmlns.jcp.org/jsf/composite"
+	xmlns:ic="http://ivyteam.ch/jsf/component"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:pe="http://primefaces.org/ui/extensions">
+<cc:interface componentType="IvyComponent">
+</cc:interface>
+<div class="p-grid card">
+<div class="p-col-12 p-md-6 p-lg-2"></div>
+<div class="p-col-12 p-md-6 p-lg-8" style="text-align: center; font-size: 20pxl">hihi</div>
+<div class="p-col-12 p-md-6 p-lg-2"></div>
+</div>
+</html>

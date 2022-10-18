@@ -1,0 +1,60 @@
+{
+  "format" : "9.4.21",
+  "id" : "183E52338A588352",
+  "kind" : "HTML_DIALOG",
+  "config" : {
+    "data" : "bank.account.management.AddressComponent.AddressComponentData"
+  },
+  "elements" : [ {
+      "id" : "f0",
+      "type" : "HtmlDialogStart",
+      "name" : "start(Address)",
+      "config" : {
+        "callSignature" : "start",
+        "result" : {
+          "params" : [
+            { "name" : "address", "type" : "bank.account.management.Address" }
+          ],
+          "map" : {
+            "result.address" : "in.address"
+          }
+        },
+        "input" : {
+          "params" : [
+            { "name" : "address", "type" : "bank.account.management.Address" }
+          ],
+          "map" : {
+            "out.address" : "param.address"
+          }
+        },
+        "guid" : "183E52338A5458F2"
+      },
+      "visual" : {
+        "at" : { "x" : 96, "y" : 64 }
+      },
+      "connect" : { "id" : "f2", "to" : "f1" }
+    }, {
+      "id" : "f1",
+      "type" : "HtmlDialogEnd",
+      "visual" : {
+        "at" : { "x" : 224, "y" : 64 }
+      }
+    }, {
+      "id" : "f3",
+      "type" : "HtmlDialogEventStart",
+      "name" : "close",
+      "config" : {
+        "guid" : "183E52338A66872A"
+      },
+      "visual" : {
+        "at" : { "x" : 96, "y" : 160 }
+      },
+      "connect" : { "id" : "f5", "to" : "f4" }
+    }, {
+      "id" : "f4",
+      "type" : "HtmlDialogExit",
+      "visual" : {
+        "at" : { "x" : 224, "y" : 160 }
+      }
+    } ]
+}

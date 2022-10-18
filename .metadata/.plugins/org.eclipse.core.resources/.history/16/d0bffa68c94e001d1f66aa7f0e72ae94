@@ -1,0 +1,4 @@
+MotobikeInformationComponentData #class
+motobike.number.MotobikeInformationComponent #namespace
+motobikeInformation motobike.number.MotobikeInformation #field
+motobikeInformation PERSISTENT #fieldModifier

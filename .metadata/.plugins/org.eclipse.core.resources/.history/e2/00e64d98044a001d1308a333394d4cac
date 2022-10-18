@@ -1,0 +1,4 @@
+validation:
+  birthdayValidationDetail: You are not allow to make a request.
+  emailValidationDetail: Invalid Email Format.
+  emailValidationSummary: 'Email-Validation Failed: Wrong Email Format.'

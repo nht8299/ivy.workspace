@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<userConfig>
+    <user>
+        <username>Mary</username>
+        <role>Employee</role>
+    </user>
+    <user>
+        <username>John</username>
+        <role>TeamLeader</role>
+    </user>
+    <user>
+        <username>David</username>
+    </user>
+    <user>
+        <username>Susan</username>
+        <role>ExecutiveManager</role>
+    </user>
+</userConfig>

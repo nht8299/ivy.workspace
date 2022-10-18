@@ -1,0 +1,4 @@
+AccountHolderDialogData #class
+com.axonactive.AccountHolderDialog #namespace
+accountHolderManagerData com.axonactive.AccountHolderManagerData #field
+accountHolderManagerData PERSISTENT #fieldModifier

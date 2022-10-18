@@ -1,0 +1,52 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:ic="http://ivyteam.ch/jsf/component"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:pe="http://primefaces.org/ui/extensions">
+<h:body>
+	<ui:composition template="/layouts/basic-10.xhtml">
+		<ui:define name="title">AccountHolderDialog</ui:define>
+		<ui:define name="content">
+			<h:outputStylesheet name="/css/accountHolder.css"></h:outputStylesheet>
+			<h3>Welcome Account Holder</h3>
+
+			<h:form id="form">
+				<p:messages />
+				<p:panelGrid columns="2"  layout="grid" 
+					styleClass="ui-panelgrid-blank ui-fluid">
+					<p:outputLabel value="First name: " styleClass="input-label" for="firstName"/>
+					<p:inputText value="#{data.accountHolder.firstName}" id="firstName"></p:inputText>
+					<p:outputLabel value="Last name: " styleClass="input-label" for="lastName"></p:outputLabel>
+					<p:inputText value="#{data.accountHolder.lastName}" id="lastName"></p:inputText>
+					<p:outputLabel value="Date Of Birth: " styleClass="input-label" for="dateOfBirth"></p:outputLabel>
+					<p:datePicker mask="00000000" value="#{data.accountHolder.dateOfBirth}" id="dateOfBirth"/>
+					<p:outputLabel value="Email: " for="email" styleClass="input-label"></p:outputLabel>
+					<p:inputText value="#{data.accountHolder.email}" id="email">
+						<f:validator validatorId="emailValidator"></f:validator>
+					</p:inputText>
+					<ic:bank.account.management.AddressComponent
+						address="#{data.accountHolder.deliveryAddress}"
+						label="Delivery Address" id="deliveryAddressComponent">
+					</ic:bank.account.management.AddressComponent>
+					<ic:bank.account.management.AddressComponent
+						address="#{data.accountHolder.billingAddress}"
+						label="Billing Address" id="billingAddressComponent">
+					</ic:bank.account.management.AddressComponent>
+				</p:panelGrid>
+				<br />
+				<div class="command-btns">
+					<p:commandLink id="cancel"
+						actionListener="#{ivyWorkflowView.cancel()}" value="Cancel" />
+					<p:commandButton id="proceed"
+						actionListener="#{logic.submitAccountHolder}" value="Proceed"
+						update="form" icon="pi pi-check" />
+				</div>
+			</h:form>
+
+		</ui:define>
+	</ui:composition>
+</h:body>
+
+</html>

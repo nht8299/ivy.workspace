@@ -1,0 +1,3 @@
+validation:
+  birthdayValidationDetail: You are not allow to make a request.
+  birthdayValidationSummary: 'Birthday-Validation Failed: Invalid Birthday.'

@@ -1,0 +1,8 @@
+UserData #class
+com.axonactive.User #namespace
+user com.axonactive.Users #field
+user PERSISTENT #fieldModifier
+currentView String #field
+currentView PERSISTENT #fieldModifier
+nextView String #field
+nextView PERSISTENT #fieldModifier

@@ -1,0 +1,8 @@
+package data.validator;
+
+import javax.faces.validator.FacesValidator;
+
+@FacesValidator("customBirthDayValidator")
+public class BirthDayValidator {
+
+}

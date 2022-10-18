@@ -1,0 +1,4 @@
+validation:
+  birthdayValidationSummary: 'Birthday-Validation Failed: Invalid Birthday.'
+  emailValidationDetail: Invalid Email Format.
+  emailValidationSummary: 'Email-Validation Failed: Wrong Email Format.'

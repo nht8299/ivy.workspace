@@ -1,0 +1,6 @@
+AccountHolder #class
+bank.account.management #namespace
+firstName String #field
+firstName PERSISTENT #fieldModifier
+lastName String #field
+lastName PERSISTENT #fieldModifier

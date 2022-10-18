@@ -1,0 +1,96 @@
+{
+  "format" : "9.4.21",
+  "id" : "183E4DFB97835DBA",
+  "kind" : "HTML_DIALOG",
+  "config" : {
+    "data" : "bank.account.management.AccountHolderDialog.AccountHolderDialogData"
+  },
+  "elements" : [ {
+      "id" : "f0",
+      "type" : "HtmlDialogStart",
+      "name" : "start()",
+      "config" : {
+        "callSignature" : "start",
+        "guid" : "183E4DFB979ADD46"
+      },
+      "visual" : {
+        "at" : { "x" : 96, "y" : 64 }
+      },
+      "connect" : { "id" : "f12", "to" : "f11" }
+    }, {
+      "id" : "f1",
+      "type" : "HtmlDialogEnd",
+      "visual" : {
+        "at" : { "x" : 368, "y" : 64 }
+      }
+    }, {
+      "id" : "f3",
+      "type" : "HtmlDialogEventStart",
+      "name" : "close",
+      "config" : {
+        "guid" : "183E4DFB97A4BCFE"
+      },
+      "visual" : {
+        "at" : { "x" : 96, "y" : 160 }
+      },
+      "connect" : { "id" : "f5", "to" : "f4" }
+    }, {
+      "id" : "f4",
+      "type" : "HtmlDialogExit",
+      "visual" : {
+        "at" : { "x" : 224, "y" : 160 }
+      }
+    }, {
+      "id" : "f6",
+      "type" : "HtmlDialogEventStart",
+      "name" : "submitAccountHolder",
+      "config" : {
+        "guid" : "183E4F14591D7953"
+      },
+      "visual" : {
+        "at" : { "x" : 96, "y" : 272 }
+      },
+      "connect" : { "id" : "f10", "to" : "f9" }
+    }, {
+      "id" : "f7",
+      "type" : "HtmlDialogEnd",
+      "visual" : {
+        "at" : { "x" : 352, "y" : 272 }
+      }
+    }, {
+      "id" : "f9",
+      "type" : "Script",
+      "name" : "print out account",
+      "config" : {
+        "output" : {
+          "code" : [
+            "ivy.log.info(\"First name: {0}\", in.accountHolder.firstName);",
+            "ivy.log.info(\"last name: {0}\", in.accountHolder.lastName);",
+            "ivy.log.info(\"Delivery Address: Street: {0} Country: {1}\", in.accountHolder.deliveryAddress.street,in.accountHolder.deliveryAddress.street);",
+            "ivy.log.info(\"Billing Address: Street: {0} Country: {1}\", in.accountHolder.billingAddress.street,in.accountHolder.billingAddress.street);"
+          ]
+        }
+      },
+      "visual" : {
+        "at" : { "x" : 224, "y" : 272 }
+      },
+      "connect" : { "id" : "f8", "to" : "f7" }
+    }, {
+      "id" : "f11",
+      "type" : "Script",
+      "name" : "inizile account",
+      "config" : {
+        "output" : {
+          "code" : [
+            "import bank.account.management.AccountHolder;",
+            "",
+            "AccountHolder accountholder = in.accountHolder;"
+          ]
+        }
+      },
+      "visual" : {
+        "at" : { "x" : 224, "y" : 64 }
+      },
+      "connect" : { "id" : "f2", "to" : "f1" }
+    } ]
+}

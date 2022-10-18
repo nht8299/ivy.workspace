@@ -1,0 +1,177 @@
+{
+  "format" : "10.0.0",
+  "id" : "183E92F01AFF52F3",
+  "config" : {
+    "data" : "bank.account.management.AccountHolderManagementData"
+  },
+  "elements" : [ {
+      "id" : "f0",
+      "type" : "RequestStart",
+      "name" : "accountHolderManagement.ivp",
+      "config" : {
+        "callSignature" : "accountHolderManagement",
+        "outLink" : "accountHolderManagement.ivp"
+      },
+      "visual" : {
+        "at" : { "x" : 120, "y" : 112 }
+      },
+      "connect" : { "id" : "f4", "to" : "f3" }
+    }, {
+      "id" : "f1",
+      "type" : "TaskEnd",
+      "visual" : {
+        "at" : { "x" : 936, "y" : 320 }
+      }
+    }, {
+      "id" : "f3",
+      "type" : "DialogCall",
+      "name" : "AccountHolderDialog",
+      "config" : {
+        "dialogId" : "bank.account.management.AccountHolderDialog",
+        "startMethod" : "start()",
+        "output" : {
+          "map" : {
+            "out" : "in",
+            "out.accountHolder" : "result.accountHolder"
+          }
+        }
+      },
+      "visual" : {
+        "at" : { "x" : 248, "y" : 112 }
+      },
+      "connect" : { "id" : "f6", "to" : "f5" }
+    }, {
+      "id" : "f5",
+      "type" : "Script",
+      "name" : "print out user",
+      "config" : {
+        "output" : {
+          "code" : [
+            "ivy.log.info(\"Account holder management process\");",
+            "ivy.log.info(\"Account holder first name {0} - last name {1}\",in.accountHolder.firstName,in.accountHolder.lastName);"
+          ]
+        }
+      },
+      "visual" : {
+        "at" : { "x" : 528, "y" : 112 }
+      },
+      "connect" : { "id" : "f17", "to" : "f16", "via" : [ { "x" : 528, "y" : 192 }, { "x" : 176, "y" : 192 }, { "x" : 176, "y" : 272 }, { "x" : 96, "y" : 272 } ] }
+    }, {
+      "id" : "f9",
+      "type" : "DialogCall",
+      "name" : "VerificationDialog",
+      "config" : {
+        "dialogId" : "bank.account.management.VerificationDialog",
+        "startMethod" : "start(bank.account.management.AccountHolder)",
+        "output" : {
+          "map" : {
+            "out" : "in",
+            "out.accountHolder" : "result.accountHolder"
+          }
+        },
+        "call" : {
+          "params" : [
+            { "name" : "accountHolder", "type" : "bank.account.management.AccountHolder" }
+          ],
+          "map" : {
+            "param.accountHolder" : "in.accountHolder"
+          }
+        }
+      },
+      "visual" : {
+        "at" : { "x" : 352, "y" : 320 }
+      },
+      "connect" : { "id" : "f12", "to" : "f11" }
+    }, {
+      "id" : "f11",
+      "type" : "Alternative",
+      "name" : "is Verify",
+      "visual" : {
+        "at" : { "x" : 760, "y" : 320 },
+        "labelOffset" : { "x" : 14, "y" : 34 }
+      },
+      "connect" : [
+        { "id" : "f2", "to" : "f1", "label" : {
+            "name" : "yes"
+          }, "condition" : "in.accountHolder.isVerified" },
+        { "id" : "f14", "to" : "f13", "label" : {
+            "name" : "No"
+          } }
+      ]
+    }, {
+      "id" : "f13",
+      "type" : "TaskSwitchEvent",
+      "name" : "Re-edit Account Holder",
+      "config" : {
+        "task" : {
+          "name" : "Re-edit Account <%=in1.accountHolder.firstName%> <%=in1.accountHolder.lastName%>",
+          "responsible" : {
+            "role" : "Employee"
+          }
+        }
+      },
+      "visual" : {
+        "at" : { "x" : 760, "y" : 48 },
+        "labelOffset" : { "x" : 14, "y" : 34 }
+      },
+      "connect" : { "id" : "f15", "to" : "f3", "via" : [ { "x" : 248, "y" : 48 } ] }
+    }, {
+      "id" : "f16",
+      "type" : "UserTask",
+      "name" : "Verify Account",
+      "config" : {
+        "dialogId" : "bank.account.management.VerificationDialog",
+        "startMethod" : "start(bank.account.management.AccountHolder)",
+        "output" : {
+          "map" : {
+            "out" : "in",
+            "out.accountHolder" : "result.accountHolder"
+          }
+        },
+        "task" : {
+          "name" : "Verification fist name <%=in.accountHolder.firstName%> last  name <%=in.accountHolder.lastName%>",
+          "responsible" : {
+            "role" : "TeamLeader"
+          }
+        },
+        "call" : {
+          "params" : [
+            { "name" : "accountHolder", "type" : "bank.account.management.AccountHolder" }
+          ],
+          "map" : {
+            "param.accountHolder" : "in.accountHolder"
+          }
+        }
+      },
+      "visual" : {
+        "at" : { "x" : 128, "y" : 320 }
+      },
+      "connect" : { "id" : "f8", "to" : "f9" }
+    }, {
+      "id" : "f7",
+      "type" : "Script",
+      "visual" : {
+        "at" : { "x" : 528, "y" : 376 }
+      }
+    } ],
+  "layout" : {
+    "lanes" : [ {
+        "name" : "AccountHolderManagement",
+        "offset" : 16,
+        "size" : 384,
+        "lanes" : [ {
+            "name" : "Employee",
+            "size" : 192,
+            "color" : "//"
+          }, {
+            "name" : "Team Leadert",
+            "size" : 192,
+            "color" : "/"
+          } ]
+      } ],
+    "colors" : {
+      "/" : "#fa0000",
+      "//" : "#04ff00"
+    }
+  }
+}

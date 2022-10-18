@@ -1,0 +1,4 @@
+HomepageData #class
+motobike.number.Homepage #namespace
+user motobike.number.Users #field
+user PERSISTENT #fieldModifier

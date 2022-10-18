@@ -1,0 +1,49 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:f="http://xmlns.jcp.org/jsf/core"
+  xmlns:h="http://xmlns.jcp.org/jsf/html" xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+  xmlns:ic="http://ivyteam.ch/jsf/component" xmlns:p="http://primefaces.org/ui"
+  xmlns:pe="http://primefaces.org/ui/extensions">
+<h:body>
+  <ui:composition template="/layouts/basic-10.xhtml">
+    <ui:define name="title">User</ui:define>
+    <ui:define name="content">
+	<h:outputStylesheet name="/css/user.css"></h:outputStylesheet>
+      <h3>
+        Welcome User
+      </h3>
+
+      <h:form id="form">
+        <p:messages />
+        <p:panelGrid columns="2" layout="grid" styleClass="ui-panelgrid-blank ui-fluid" 
+          columnClasses="ui-g-12 ui-md-3 ui-lg-2, ui-g-12 ui-md-9 ui-lg-4, ui-g-12 ui-md-3 ui-lg-2, ui-g-12 ui-md-9 ui-lg-4">
+		<p:outputLabel styleClass="input-label" value="First name: " for="FirstName"></p:outputLabel>
+        <p:inputText value="#{data.user.firstName}" required="true"  id="FirstName"></p:inputText>
+        <p:outputLabel styleClass="input-label" value="Last name: " for="LastName"></p:outputLabel>
+		<p:inputText value="#{data.user.lastName}" required="true" id="LastName"></p:inputText>
+		<p:outputLabel styleClass="input-label" value="Birthday: "></p:outputLabel>
+		<p:inputText value="#{data.user.birthday}">
+		<f:converter converterId="dayConverter"></f:converter>
+		</p:inputText>
+		<p:outputLabel styleClass="input-label" value="Email: " for="Email"></p:outputLabel>
+		<p:inputText value="#{data.user.email}" id="Email">
+		<f:validator validatorId="customEmailValidator"></f:validator>
+		</p:inputText>
+		<p:outputLabel styleClass="input-label" value="Gender: " for="Gender"></p:outputLabel>
+		<p:selectOneRadio id="Gender" value="#{data.user.gender}">
+			<f:selectItem itemLabel="Male" itemValue="Male"></f:selectItem>
+			<f:selectItem itemLabel="Female" itemValue="Female"></f:selectItem>
+		</p:selectOneRadio>
+			
+		</p:panelGrid>
+        
+        <br />
+        <div class="command-btns">
+          <p:commandLink id="cancel" actionListener="#{ivyWorkflowView.cancel()}" value="Cancel" />
+          <p:commandButton id="proceed" actionListener="#{logic.submitUser}" value="Proceed" update="form" icon="pi pi-check" />
+        </div>
+      </h:form>
+
+    </ui:define>
+  </ui:composition>
+</h:body>
+
+</html>

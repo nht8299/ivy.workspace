@@ -1,0 +1,4 @@
+.main-div{
+	flex: 1;
+	ms-flex: 1;
+}

@@ -1,0 +1,4 @@
+iMotobikeNumberPlateProcessData #class
+motobike.number #namespace
+user motobike.number.Users #field
+user PERSISTENT #fieldModifier

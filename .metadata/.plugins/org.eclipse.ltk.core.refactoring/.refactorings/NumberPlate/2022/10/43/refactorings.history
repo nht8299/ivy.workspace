@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete 3 elements from project &apos;NumberPlate&apos;&#x0D;&#x0A;- Original project: &apos;NumberPlate&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     MotobikeInformation.ivyClass&#x0D;&#x0A;     PersonalInformation.ivyClass&#x0D;&#x0A;     Users.ivyClass" description="Delete elements" element1="dataclasses/com/axonactive/number/plate/PersonalInformation.ivyClass" element2="dataclasses/com/axonactive/number/plate/MotobikeInformation.ivyClass" element3="dataclasses/com/axonactive/number/plate/Users.ivyClass" elements="0" flags="589830" id="org.eclipse.jdt.ui.delete" resources="3" stamp="1666084783951" subPackages="false" version="1.0"/>
+</session>

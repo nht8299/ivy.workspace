@@ -1,0 +1,4 @@
+PlateNumber #class
+PlateNumber #namespace
+plateNumber String #field
+plateNumber PERSISTENT #fieldModifier

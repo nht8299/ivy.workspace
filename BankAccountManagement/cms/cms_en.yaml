@@ -1,0 +1,3 @@
+validation:
+  emailValidationDetail: Invalid Email Format.
+  emailValidationSummary: 'Email-Validation Failed: Wrong Email Format.'

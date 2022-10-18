@@ -1,0 +1,38 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:ic="http://ivyteam.ch/jsf/component"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:pe="http://primefaces.org/ui/extensions">
+<h:body>
+	<ui:composition template="/layouts/basic-10.xhtml">
+		<ui:define name="title">VerificationDialog</ui:define>
+		<ui:define name="content">
+
+			<h3>Verification Account</h3>
+
+			<h:form id="form">
+				<p:messages />
+				<h:panelGrid columns="2">
+					<p:outputLabel value="First name: " styleClass="input-label" />
+					<p:outputLabel value="#{data.accountHolder.firstName}"></p:outputLabel>
+					<p:outputLabel value="Last name: " styleClass="input-label"></p:outputLabel>
+					<p:outputLabel value="#{data.accountHolder.lastName}"></p:outputLabel>
+
+
+				</h:panelGrid>
+				<br />
+				<div class="command-btns">
+					<p:commandLink id="Decline"
+						actionListener="#{logic.decline}" value="Cancel" />
+					<p:commandButton id="Verify" actionListener="#{logic.verify}"
+						value="Proceed" update="form" icon="pi pi-check" />
+				</div>
+			</h:form>
+
+		</ui:define>
+	</ui:composition>
+</h:body>
+
+</html>

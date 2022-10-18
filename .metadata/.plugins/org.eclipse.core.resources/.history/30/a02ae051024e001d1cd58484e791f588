@@ -1,0 +1,6 @@
+HomepageData #class
+motobike.number.Homepage #namespace
+personalInformation motobike.number.PersonalInformation #field
+personalInformation PERSISTENT #fieldModifier
+motobikeInformation motobike.number.MotobikeInformation #field
+motobikeInformation PERSISTENT #fieldModifier

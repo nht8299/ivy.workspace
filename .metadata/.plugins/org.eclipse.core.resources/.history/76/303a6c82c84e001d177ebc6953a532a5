@@ -1,0 +1,8 @@
+Users #class
+PlateNumber #namespace
+userInformation PlateNumber.UserInformation #field
+userInformation PERSISTENT #fieldModifier
+motoBikeInfromation PlateNumber.MotoBikeInformation #field
+motoBikeInfromation PERSISTENT #fieldModifier
+plateNumber PlateNumber.PlateNumber #field
+plateNumber PERSISTENT #fieldModifier

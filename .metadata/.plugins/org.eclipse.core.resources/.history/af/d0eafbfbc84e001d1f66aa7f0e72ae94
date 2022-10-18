@@ -1,0 +1,4 @@
+PlateNumber #class
+PlateNumber #namespace
+plateNumber java.util.List<String> #field
+plateNumber PERSISTENT #fieldModifier

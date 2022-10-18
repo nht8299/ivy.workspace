@@ -1,0 +1,11 @@
+SMTP_ENCRYPTION_METHOD=START_TLS
+SMTP_HOST_NAME=smtp.gmail.com
+SMTP_PASSW=bvxzesgxqutimbrj
+SMTP_PORT=587
+SMTP_TEST_FROM=noreply.agileterms@gmail.com
+SMTP_TEST_TO=thinh.nguyenhung@axonactive.com
+SMTP_USER=noreply.agileterms@gmail.com
+SMTP_USE_CUSTOM_MAIL_SERVER=true
+SMTP_USE_DEFAULT_PORT=false
+VISIBILITY_LEVEL=EXPERT
+eclipse.preferences.version=1

@@ -1,0 +1,4 @@
+PersionalInformationComponentData #class
+motobike.number.PersionalInformationComponent #namespace
+personalInfomation motobike.number.PersonalInformation #field
+personalInfomation PERSISTENT #fieldModifier
